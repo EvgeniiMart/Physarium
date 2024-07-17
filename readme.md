@@ -1,5 +1,14 @@
 # ПРОЕКТ PHYSARIUM  
 
+### Установка и запуск
+```
+git clone git@github.com:EvgeniiMart/Physarium.git &&
+cd Physarium &&
+git checkout main &&
+pip install -r requirements.txt &&
+python3 main.py
+```
+
 ### Описание
 Physarium — алгоритм роевого интеллекта, формирующий сложное поведение системы при простом списке команд для агентов. Основан на одноимённом организме из реальной жизни.
 

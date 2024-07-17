@@ -31,7 +31,7 @@ class Environment:
 
     def draw(self):
         plt.clf()
-        plt.imshow(self.matrix, cmap='hot')
+        plt.imshow(self.matrix, cmap='tab20')
         plt.draw()
         plt.gcf().canvas.flush_events()
 

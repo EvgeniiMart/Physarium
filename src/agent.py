@@ -68,7 +68,7 @@ class Agent:
 
         affected_line = get_line(self.x_pos, self.y_pos, x_new, y_new, x_len, y_len)
         for pair in affected_line:
-            self.make_blob(matrix, pair[0], pair[1], 60, 13, x_len, y_len)
+            self.make_blob(matrix, pair[0], pair[1], 160, 30, x_len, y_len)
 
         self.x_pos = round_coord(x_new, x_len)
         self.y_pos = round_coord(y_new, y_len)

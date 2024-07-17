@@ -1,13 +1,13 @@
 Environment settings
 
-Field Length: 1000
-Field Width: 2000
+Field Length: 300
+Field Width: 350
 Evaporation Coefficient: 20
-Agents Amount: 1000
+Agents Amount: 80
 
 Agents settings
 
-Agent Speed: 5
-Agent Turn: 20
-Agent Detectors Rotate: 40
-Agent Detectors Distance: 20
+Agent Speed: 10
+Agent Turn: 30
+Agent Detectors Rotate: 20
+Agent Detectors Distance: 40
