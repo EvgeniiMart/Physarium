@@ -17,21 +17,23 @@ class Environment:
         plt.ion()
         plt.show()
 
+        step = 0
         while True:
             self.agents_update()
             self.draw()
-            self.evaporate()
-            sleep(0.1)
+            if step == 0:
+                self.evaporate()
+            step = (step + 1) % 5
 
     def agents_update(self):
         for unit in self.agents_list:
             unit.update(self.matrix, self.x_len, self.y_len)
 
     def draw(self):
+        plt.clf()
         plt.imshow(self.matrix, cmap='hot')
         plt.draw()
-        plt.pause(0.001)
-        plt.ioff()
+        plt.gcf().canvas.flush_events()
 
     def evaporate(self):
         tmp_func = np.vectorize(lambda x: max(0, x - x * (self.evaporation_coeff / 100)))

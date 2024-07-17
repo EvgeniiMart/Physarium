@@ -3,7 +3,7 @@ Environment settings
 Field Length: 1000
 Field Width: 2000
 Evaporation Coefficient: 20
-Agents Amount: 1
+Agents Amount: 1000
 
 Agents settings
 
