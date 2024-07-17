@@ -10,6 +10,7 @@ class Agent:
         self.x_pos = start_x
         self.y_pos = start_y
         self.direction = start_dir
+        self.wag = 0
 
     def update_detectors(self, x_len, y_len):
         self.left_detector_direction = self.direction - self.angle_detect
@@ -23,8 +24,13 @@ class Agent:
         self.right_detector_y = round_coord(y_change(self.y_pos, self.right_detector_direction, self.dist_detect), y_len)
 
     def wagging(self):
-        if random() < 0.3:
-            self.direction += (random() - 0.5) * self.angle_turn
+        if self.wag > 0:
+            if self.wag > 5:
+                self.direction += 0.3 * random() * self.angle_turn * self.wag_type
+            self.wag -= 1
+        elif 0.35 < random() < 0.55:
+            self.wag = 10
+            self.wag_type = 1 if random() > 0.5 else -1
 
     def change_way(self, matrix, x_len, y_len):
         self.update_detectors(x_len, y_len)
